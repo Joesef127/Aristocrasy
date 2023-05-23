@@ -1,0 +1,125 @@
+@media screen and (max-width:960px) {
+  .hero-section {
+    position: relative;
+    background: url(./images/hero-couple-mobile.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-flower-div {
+    gap: 10px;
+  }
+
+  .hero-flower {
+    width: 68.38px;
+  }
+
+  .section-two {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .couple-sitting {
+    width: 100%;
+  }
+  
+  .details-div {
+    padding: 50px 30px;
+  }
+
+  .site-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .site-logo {
+    width: 60px;
+  }
+  
+  .couple-names {
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 460px;
+  }
+
+  .collage-div {
+    gap: 10px;
+  }
+
+  .couple-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .gallery-image {
+    width: 162px;
+  }
+
+  .couple-names-big {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    color: #7A179B;
+    opacity: 0.2;
+  }
+
+  .base-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #1A0321;
+  }
+
+  .video-container {
+    height: 256px;
+  }
+
+  .left-v-flower {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 65px;
+    display: none;
+  }
+  
+  .right-v-flower {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    display: none;
+    width: 67px;
+  }
+
+  .couple-sitting-flower {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    display: block;
+    width: 67px;
+  }
+}
