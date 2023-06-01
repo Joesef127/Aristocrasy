@@ -1,10 +1,11 @@
 @font-face {
 	font-family: ogg;
 	src: url(./fonts/Ogg-Regular.ttf);
-} 
+}
+
 @font-face {
-font-family: ogg-italic;
-src: url(./fonts/Ogg-MediumItalic.woff);
+	font-family: ogg-italic;
+	src: url(./fonts/Ogg-LightItalic.woff);
 }
 
 * {
@@ -37,8 +38,8 @@ src: url(./fonts/Ogg-MediumItalic.woff);
 	--lh-3: 40px;
 	--lh-4: 120px;
 	--lh-5: 260px
-		/* ##font weight */
-		--fw-1: 300;
+	/* ##font weight */
+	--fw-1: 300;
 	--fw-2: 400;
 
 	/* ##font family */
@@ -46,13 +47,21 @@ src: url(./fonts/Ogg-MediumItalic.woff);
 }
 
 /* side scrollbar */
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar {
+	width: 4px;
+}
 
-::-webkit-scrollbar-track { background: #f5c5c5; }
+::-webkit-scrollbar-track {
+	background: #f5c5c5;
+}
 
-::-webkit-scrollbar-thumb { background: #EAA9B7; }
+::-webkit-scrollbar-thumb {
+	background: #EAA9B7;
+}
 
-::-webkit-scrollbar-thumb:hover { background: #af87bc; }
+::-webkit-scrollbar-thumb:hover {
+	background: #af87bc;
+}
 
 
 
@@ -61,6 +70,7 @@ body {
 	font-family: var(--ff);
 	background-color: var(--main-bg);
 	padding-bottom: 100px;
+	min-width: 375px;
 }
 
 /* reset */
@@ -88,6 +98,16 @@ a {
 	z-index: 1;
 }
 
+@keyframes brighten {
+	0% {
+		opacity: 100%;
+	}
+
+	100% {
+		opacity: 30%;
+	}
+}
+
 .hero-section::after {
 	content: " ";
 	top: 0;
@@ -98,6 +118,10 @@ a {
 	position: absolute;
 	opacity: 30%;
 	z-index: -1;
+	animation-name: brighten;
+	animation-duration: 5s;
+	/* animation-delay: 1s; */
+	animation-timing-function: ease-in-out;
 }
 
 .container {
@@ -110,8 +134,6 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* flex-direction: column; */
-	/* gap: 300px 0; */
 	margin-top: 30px;
 }
 
@@ -175,7 +197,7 @@ a {
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	margin: 90px 0;
+	margin: 40px 0;
 	gap: 30px;
 }
 
@@ -188,14 +210,14 @@ a {
 .section-two {
 	display: flex;
 	position: relative;
-	/* gap: 50px; */
+	gap: 10px;
 	/* flex-wrap: wrap; */
 }
 
 .couple-image-container {
 	position: relative;
 	z-index: -1;
-	width: fit-content;
+	width: 50%;
 	height: fit-content;
 }
 
@@ -204,10 +226,14 @@ a {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 99.2%;
+	height: 99%;
 	background-color: #000000;
 	position: absolute;
 	opacity: 40%;
+}
+
+.couple-sitting {
+	width: 100%;
 }
 
 .couple-sitting-flower {
@@ -265,6 +291,10 @@ a {
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.gift-text {
+	color: var(--dark-purple);
+}
+
 .button-div {
 	display: flex;
 	gap: 15px;
@@ -282,17 +312,60 @@ a {
 .fill-button {
 	background-color: var(--purple);
 	color: var(--white);
+	position: relative;
+}
+
+.fill-button::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: 1px solid var(--purple);
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.fill-button:hover::before,
+.fill-button:focus::before {
+	top: 15%;
+	right: 5%;
 }
 
 .hollow-button {
+	background-color: var(--main-bg);
 	color: var(--purple);
+	position: relative;
+	transition: all 0.3s;
+}
+
+.hollow-button::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--purple);
+	/* border: 1px solid var(--purple); */
+	transition: all 0.3s;
+	cursor: pointer;
+	z-index: -1;
+}
+
+.hollow-button:hover::before,
+.hollow-button:focus::before {
+	top: 15%;
+	right: 5%;
 }
 
 .section-three {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 100px 0 200px 0;
+	margin: 100px 0 100px 0;
 	position: relative;
 }
 
@@ -308,7 +381,7 @@ a {
 	transform: rotateY(180deg);
 	position: absolute;
 	top: 10%;
-	left: 95.2%;
+	right: 0%;
 	display: block;
 	width: 63px;
 	overflow: hidden;
@@ -334,27 +407,17 @@ a {
 	position: relative;
 	width: 100%;
 	height: 460px;
-	/* z-index: 1; */
+	flex-wrap: wrap;
+	display: flex;
+	max-width: 1180px;
 }
 
-.video-container video {
+.video-container #myVideo {
 	/* position: absolute; */
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-}
-
-.play-button {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 48px;
-	color: white;
-	border-radius: 50% 100%;
-	cursor: pointer;
 }
 
 .collage-div {
@@ -362,24 +425,80 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 30px;
+	gap: 15px;
 }
 
 .couple-gallery {
 	display: flex;
-	justify-content: center;
-	gap: 20px;
+	justify-content: start;
+	gap: 15px;
 	flex-wrap: wrap;
 }
 
 .row {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 8px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(150px);
+		transform: translateY(150px);
+		display: none;
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		display: block;
+	}
 }
 
 .gallery-image {
-	width: 285px;
+	width: 284px;
+	opacity: 0;
+}
+
+.image-1.animate {
+	animation: fadeIn 2.5s ease forwards;
+}
+
+.image-2.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 0.5s;
+}
+
+.image-3.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 2.5s;
+}
+
+.image-4.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 3s;
+}
+
+.image-5.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 2s;
+}
+
+.image-6.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 1s;
+}
+
+.image-7.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 1.5s;
+}
+
+.image-8.animate {
+	animation: fadeIn 2.5s ease forwards;
+	animation-delay: 3.5s;
 }
 
 .couple-names-big {
@@ -391,7 +510,6 @@ a {
 	color: var(--purple);
 	opacity: 0.1;
 	width: max-content;
-	/* margin-left: -180px; */
 	position: sticky;
 }
 
@@ -411,27 +529,27 @@ a {
 }
 
 .scrollUp {
-  position: fixed;
-  bottom: 0;
-  right: 1rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5 ease-in-out;
+	position: fixed;
+	bottom: 0;
+	right: 1rem;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
 
 }
 
 .scrollUp.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(-1rem);
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(-1rem);
 }
 
 .scrollUp:is(:hover, :focus) {
-  transform: translateY(-1.52rem);
+	transform: translateY(-1.52rem);
 }
 
 .scrollUp img {
-  color: var(--purple);
+	color: var(--purple);
 }
 
 .heart {
