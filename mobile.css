@@ -17,8 +17,21 @@
 
   .section-two {
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .detail-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
     flex-wrap: wrap;
     flex-direction: column-reverse;
+  }
+
+  .couple-image-container {
+    width: 100%;
   }
 
   .couple-sitting {
@@ -123,3 +136,4 @@
     width: 67px;
   }
 }
+

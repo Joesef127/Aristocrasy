@@ -209,9 +209,14 @@ a {
 
 .section-two {
 	display: flex;
+	justify-content: center;
 	position: relative;
 	gap: 10px;
 	/* flex-wrap: wrap; */
+}
+
+.detail-container {
+	display: flex;
 }
 
 .couple-image-container {
