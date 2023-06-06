@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
 @font-face {
 	font-family: ogg;
 	src: url(./fonts/Ogg-Regular.ttf);
@@ -41,9 +43,11 @@
 	/* ##font weight */
 	--fw-1: 300;
 	--fw-2: 400;
+	--fw-3: 700;
 
 	/* ##font family */
-	--ff: ogg, "Courier New", Courier, monospace;
+	--ff-1: ogg, "Courier New", Courier, monospace;
+	--ff-2: 'Inter', sans-serif;
 }
 
 /* side scrollbar */
@@ -67,10 +71,10 @@
 
 body {
 	scroll-behavior: smooth;
-	font-family: var(--ff);
+	font-family: var(--ff-1);
 	background-color: var(--main-bg);
 	padding-bottom: 100px;
-	min-width: 375px;
+	/* min-width: 375px; */
 }
 
 /* reset */
@@ -125,7 +129,7 @@ a {
 }
 
 .container {
-	width: 90%;
+	width: 80%;
 	height: 100%;
 }
 
@@ -217,12 +221,15 @@ a {
 
 .detail-container {
 	display: flex;
+	justify-content:center;
+	align-items: center;
+	gap: 10px;
 }
 
 .couple-image-container {
 	position: relative;
 	z-index: -1;
-	width: 50%;
+	width: fit-content;
 	height: fit-content;
 }
 
@@ -238,7 +245,7 @@ a {
 }
 
 .couple-sitting {
-	width: 100%;
+	width: 600px;
 }
 
 .couple-sitting-flower {
@@ -271,8 +278,9 @@ a {
 .gift-heading {
 	font-size: var(--fs-1);
 	line-height: var(--lh-1);
-	font-weight: var(--fw-2);
-	color: #1A0321;
+	font-weight: var(--fw-3);
+	color: #112629;
+	font-family: var(--ff-2);
 }
 
 .date-text,
@@ -298,6 +306,8 @@ a {
 
 .gift-text {
 	color: var(--dark-purple);
+	font-family: var(--ff-2);
+	font-weight: var(--fw-3);
 }
 
 .button-div {
@@ -405,6 +415,12 @@ a {
 
 .collage-container {
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* justify-content: flex-start; */
+
 }
 
 /* embedded video styling */
@@ -414,7 +430,7 @@ a {
 	height: 460px;
 	flex-wrap: wrap;
 	display: flex;
-	max-width: 1180px;
+	max-width: 1061px;
 }
 
 .video-container #myVideo {
@@ -427,8 +443,8 @@ a {
 
 .collage-div {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: start;
+	align-items: start;
 	flex-direction: column;
 	gap: 15px;
 }
@@ -436,12 +452,14 @@ a {
 .couple-gallery {
 	display: flex;
 	justify-content: start;
+	/* align-items: center; */
 	gap: 15px;
 	flex-wrap: wrap;
 }
 
 .row {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 	gap: 8px;
 }
@@ -463,7 +481,7 @@ a {
 }
 
 .gallery-image {
-	width: 284px;
+	width: 254px;
 	opacity: 0;
 }
 
@@ -529,7 +547,7 @@ a {
 }
 
 .base-text {
-	font-family: var(--ff);
+	font-family: var(--ff-1);
 	font-style: italic;
 }
 
