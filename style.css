@@ -224,7 +224,7 @@ a {
 	gap: 10px;
 	/* flex-wrap: wrap; */
 	margin-top: 70px;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 .detail-container {
