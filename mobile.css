@@ -1,3 +1,36 @@
+@media screen and (max-width: 1230px) {
+
+  .couple-image-container {
+    width: 100%;
+    gap: 200px;
+  }
+
+  .hashtag {
+    font-size: 110px;
+    font-weight: 400;
+    line-height: 260px;
+    text-align: center;
+    /* overflow: hidden; */
+  }
+
+  .couple-sitting {
+    width: 500px;
+    left: 25%;
+    right: 25%;
+  }
+
+  .native-couple {
+    width: 330px;
+    height: 316px;
+    left: 0%;
+  }
+
+  .couple-holding {
+    width: 344px;
+    height: 366px;
+  }
+}
+
 @media screen and (max-width:960px) {
   .container {
     width: 90%;
@@ -28,18 +61,54 @@
   .detail-container {
     width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    gap: 20px;
   }
 
   .couple-image-container {
-    width: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* flex-direction: column-reverse; */
+    margin-top: 330px;
   }
 
   .couple-sitting {
-    width: 100%;
+    /* width: 450px; */
+    left: auto;
+    right: auto;
+    margin-top: -850px;
+  }
+
+  /* .native-couple {
+    width: 290px;
+    height: 276px;
+    left: 0%;
+  } */
+
+  .couple-holding {
+    /* width: 274px;
+    height: 326px; */
+    margin-top: -45px;
+  } 
+
+  .hashtag {
+    font-size: 80px;
+    line-height: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+  }
+
+  .hashtag-div {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
   }
 
   .details-div {
@@ -69,6 +138,12 @@
   .video-container {
     width: 100%;
     height: fit-content;
+  }
+
+  .love-story-div {
+    max-width: 600px;
+    padding: 15px 31px;
+    gap: 15px;
   }
 
   .collage-div {
@@ -110,7 +185,7 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #1A0321;
+  	color: #E46B5E;
   }
 
   .video-container {
@@ -137,7 +212,7 @@
 
   .couple-sitting-flower {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 0;
     display: block;
     width: 67px;
