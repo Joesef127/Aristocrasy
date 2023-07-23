@@ -232,7 +232,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column-reverse;
-	gap: 90px;
+	gap: 5 0px;
 }
 
 .couple-image-container {
@@ -242,23 +242,22 @@ a {
 	align-items: center;
 	flex-shrink: 0;
 	width: 100%;
-	max-width: 1200px;
-	margin-top: -180px;
+	max-width: 1061px;
+	margin-top: 280px;
 	gap: 300px;
 }
 
 .hashtag {
-	/* opacity: 0.50000001192092896; */
+	position: absolute;
+	/* opacity: 0.30000001192092896; */
 	color: rgba(122, 23, 155, 0.10);
-	font-family: Ogg;
+	font-family: var(--ff-1);
 	font-size: 140px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 260px;
-	/* text-align: right; */
-	/* position: static */
+	text-align: right;
 	z-index: -1;
-	/* width: max-content; */
 }
 
 .couple-sitting {
@@ -269,6 +268,7 @@ a {
 	left: 25%;
 	right: 25%;
 	margin-top: -130px;
+	border-radius: 10px;
 }
 
 .native-couple {
@@ -329,6 +329,7 @@ a {
 	align-items: center;
 	flex-direction: column;
 	gap: 15px 0;
+	width: max-content;
 }
 
 .date-heading,
@@ -383,13 +384,16 @@ a {
 }
 
 .gift-button {
-	width: fit-content;
-	padding: 7px 20px;
+	/* width: fit-content; */
+	display: flex;
+	align-items: flex-start;
+	padding: 6px 20px;
 	font-size: var(--fs-1);
+	font-weight: var(--fw-2);
 	line-height: var(--lh-1);
 	cursor: pointer;
 	border: 1px solid #7a179b;
-	border-radius: 10px;
+	border-radius: 8px;
 }
 
 .fill-button {
@@ -409,7 +413,7 @@ a {
 	border: 1px solid var(--purple);
 	transition: all 0.3s;
 	cursor: pointer;
-	border-radius: 12px;
+	border-radius: 10px;
 }
 
 .fill-button:hover::before,
@@ -437,7 +441,7 @@ a {
 	transition: all 0.3s;
 	cursor: pointer;
 	z-index: -1;
-	border-radius: 10px;
+	border-radius: 8px;
 }
 
 .hollow-button:hover::before,
@@ -618,7 +622,7 @@ a {
 
 .couple-names-big {
 	opacity: 0.30000001192092896;
-	color: #7a179b1a;
+	color: rgba(122, 23, 155, 0.10);
 	font-family: Ogg;
 	font-size: 150px;
 	font-style: normal;
