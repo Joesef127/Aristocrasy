@@ -46,6 +46,12 @@
     background-size: cover;
   }
 
+  /* .scrolldown-button {
+    transform: rotate(90degs);
+    display: block;
+    b
+  } */
+
   .hero-flower-div {
     gap: 10px;
   }
@@ -379,13 +385,6 @@
     gap: 20px;
   }
 
-  .date-text,
-  .time-text,
-  .venue-text {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   .couple-image-container {
     width: 100%;
     display: flex;
@@ -444,12 +443,13 @@
   }
 
   .section-heading {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    color: #1A0321;
     text-align: center;
-    color: #112629;
+    font-family: Ogg;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
   }
 
   .section-three {

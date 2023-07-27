@@ -184,7 +184,8 @@ a {
 	font-style: normal;
 	font-weight: 500;
 	line-height: 130px;
-	text-align: center;
+	/* text-align: center; */
+	/* animation: myAnim 2s ease 0s 1 normal forwards; */
 }
 
 /* .purple-part {
@@ -199,22 +200,72 @@ a {
 	text-align: center;
 	color: #ffffff;
 	letter-spacing: 1.5px;
+	/* animation: myAnim 4s ease 0s 1 normal forwards; */
+} 
+
+.scrolldown-div {
+	/* display: none; */
+	padding-bottom: 100px;
+	animation: bounce 2s ease 0s infinite normal forwards;
 }
 
-/* .hero-flower-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	margin: 40px 0;
-	gap: 30px;
+/* scroll down animation */
+@keyframes bounce {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-35px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 
-.flower-line {
-	width: 20%;
-	border: 1px solid #CDAA73;
-	;
+/* @keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 } */
 
 .section-two {
@@ -249,8 +300,8 @@ a {
 
 .hashtag {
 	position: absolute;
-	/* opacity: 0.30000001192092896; */
-	color: rgba(122, 23, 155, 0.10);
+	opacity: 0.30000001192092896;
+	color: #7a179b1a;
 	font-family: var(--ff-1);
 	font-size: 140px;
 	font-style: normal;
@@ -258,6 +309,7 @@ a {
 	line-height: 260px;
 	text-align: right;
 	z-index: -1;
+	-webkit-text-stroke: 2px #7a179b;
 }
 
 .couple-sitting {
@@ -499,14 +551,13 @@ a {
 }
 
 .section-heading {
-	font-family: ogg-italic;
 	color: #1A0321;
+	text-align: center;
 	font-family: Ogg;
 	font-size: 24px;
 	font-style: italic;
 	font-weight: 400;
-	line-height: 32px;
-	text-align: center;
+	line-height: 32px; /* 133.333% */
 }
 
 .collage-container {
@@ -576,6 +627,12 @@ a {
 	}
 }
 
+@keyframes bouncing {
+	0% {
+		
+	}
+}
+
 .gallery-image {
 	width: 254px;
 	opacity: 0;
@@ -622,7 +679,7 @@ a {
 
 .couple-names-big {
 	opacity: 0.30000001192092896;
-	color: rgba(122, 23, 155, 0.10);
+	color: #7a179b1a;
 	font-family: Ogg;
 	font-size: 150px;
 	font-style: normal;
@@ -631,6 +688,8 @@ a {
 	text-align: center;
 	width: max-content;
 	position: sticky;
+	-webkit-text-stroke: 2px 
+	#7a179b;
 }
 
 .base-paragraph {

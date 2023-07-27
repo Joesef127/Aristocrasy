@@ -1,3 +1,32 @@
+// JavaScript
+let i = 0;
+let j = 0;
+let text = 'invites you to celebrate their wedding.';
+let title = 'A WandEll Fairytale';
+let speed1 = 50; /* The speed/duration of the effect in milliseconds */
+let speed2 = 80; /* The speed/duration of the effect in milliseconds */
+let coupleText = document.getElementById("typewriter-text");
+let coupleName = document.getElementById("typewriter-name");
+
+function typeWriterName() {
+  if (j < title.length) {
+    coupleName.innerHTML += title.charAt(j);
+    j++;
+    setTimeout(typeWriterName, speed2);
+  }
+}
+
+function typeWriter() {
+  if (i < text.length) {
+    coupleText.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed1);
+  }
+}
+
+typeWriterName();
+typeWriter();
+
 
 /* show go top btn when scroll window to 500px */
 
