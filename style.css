@@ -205,8 +205,10 @@ a {
 
 .scrolldown-div {
 	/* display: none; */
-	padding-bottom: 100px;
+	position: absolute;
+	/* padding-bottom: 100px; */
 	animation: bounce 2s ease 0s infinite normal forwards;
+	bottom: 10%;
 }
 
 /* scroll down animation */

@@ -46,6 +46,15 @@
     background-size: cover;
   }
 
+  .hero-section::after {
+    opacity: 0%;
+  }
+
+  .hero-content-div {
+    position: absolute;
+    bottom: 30%;
+  }
+
   /* .scrolldown-button {
     transform: rotate(90degs);
     display: block;
