@@ -5,12 +5,12 @@ let close = document.getElementById("close");
 
 giftModalButton.addEventListener("click", () => {
   buttonDiv.style.display = "flex";
-  giftModalButton.style.opacity = "0";
+  // giftModalButton.style.opacity = "0";
 });
 
 close.addEventListener("click", () => {
   buttonDiv.style.display = "none";
-  giftModalButton.style.opacity = "1";
+  // giftModalButton.style.opacity = "1";
 });
 
 // story modal effect
