@@ -287,7 +287,11 @@
   .love-story {
     left: 5%;
     width: 90%;
-    padding: 22px;
+    /* padding: 22px; */
+  }
+
+  .go-back {
+    margin-bottom: 60px;
   }
 }
 
