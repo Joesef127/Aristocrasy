@@ -546,13 +546,13 @@ body::after {
 	align-items: center;
 	gap: 20px;
 	flex-direction: column;
-	width: 150px;
+	width: 160px;
 	min-width: 150px;
 	height: 150px;
 	max-height: 150px;
 	border-radius: 8px;
 	border: 1px solid #7a179b;
-	padding: 20px 0;
+	padding: 20px 15px;
 }
 
 .naira-button-label,
@@ -560,6 +560,7 @@ body::after {
 	font-size: 16px;
 	font-weight: normal;
 	text-align: center;
+	max-width: 90%;
 }
 
 .other-gift-div {
@@ -568,7 +569,7 @@ body::after {
 	align-items: center;
 	gap: 20px;
 	flex-direction: column;
-	width: 150px;
+	width: 160px;
 	min-width: 150px;
 	height: 150px;
 	max-height: 150px;
@@ -599,15 +600,18 @@ body::after {
 .gift-button {
 	/* width: fit-content; */
 	display: flex;
-	align-items: flex-start;
-	padding: 5px 20px;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 10px;
 	font-size: var(--fs-1);
 	font-weight: var(--fw-2);
 	line-height: var(--lh-1);
 	cursor: pointer;
 	border: 1px solid #7a179b;
 	border-radius: 8px;
-	max-width: 150px;
+	min-width: 140px;
+	width: 140px;
+	text-align: center;
 }
 
 .fill-button {
@@ -945,7 +949,7 @@ body::after {
 	opacity: 0;
 }
 
-.image-5, .image-3 {
+.image-5, .image-6 {
 	border-radius: 10px;
 }
 
