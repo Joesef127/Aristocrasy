@@ -283,6 +283,11 @@
   .couple-names-big {
     font-size: 120px;
   }
+
+  .love-story {
+    left: 5%;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width:620px) { 

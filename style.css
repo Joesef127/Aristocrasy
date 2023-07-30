@@ -51,9 +51,9 @@
 	--fw-3: 500;
 
 	/* ##font family */
-	--ff-1: ogg, "Courier New", Courier;
+	--ff-1: ogg, "Courier New", Courier sans-serif;
 	--ff-2: 'Inter', sans-serif;
-	--ff-3: ogg-medium, "Courier New", Courier;
+	--ff-3: ogg-medium, "Courier New", Courier, sans-serif;
 }
 
 /* side scrollbar */
@@ -456,7 +456,7 @@ a {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	/* height: 100vh; */
 	/* max-width: fit-content; */
 	flex-wrap: wrap;
 	padding: 20px;
@@ -796,7 +796,15 @@ body::after {
 	}
 }
 
-.love-story:
+.love-story::-webkit-scrollbar {
+	width: 5px;
+	height: 150px;
+}
+
+::-webkit-scrollbar-track {
+	background: #cf9d93;
+	height: 150px;
+}
 
 
 .close-story {
@@ -937,8 +945,8 @@ body::after {
 	opacity: 0;
 }
 
-.image-5 {
-	border-radius: 8px;
+.image-5, .image-3 {
+	border-radius: 10px;
 }
 
 .image-1.animate {
